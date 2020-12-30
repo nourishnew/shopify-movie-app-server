@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 	res.send("Welcome to shoppies backend api");
 });
 mongoose
-	.connect(process.env.CONECTION_URL, {
+	.connect(process.env.CONNECTION_URL, {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 	})
