@@ -11,10 +11,10 @@ Backend server is deployed in heroku
 
 Extra features
 
-Login
-create account
-logout
-saving nomination list in mongodb datbase
-Loading animations
-Notification for error and success 7.Beutifully designed using material UI
-used React hooks to do network requests
+1.Login
+2.create account
+3.logout
+4.saving nomination list in mongodb datbase
+5.Loading animations
+6.Notification for error and success 7.Beutifully designed using material UI
+7.used React hooks to do network requests
