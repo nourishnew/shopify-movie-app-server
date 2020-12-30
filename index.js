@@ -17,7 +17,9 @@ app.use(
 	})
 );
 app.use(cors());
-
+app.get("/", (req, res) => {
+	res.send("shopify movies server connected");
+});
 mongoose
 	.connect(process.env.CONNECTION_URL, {
 		useNewUrlParser: true,
