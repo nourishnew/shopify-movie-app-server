@@ -17,9 +17,7 @@ app.use(
 	})
 );
 app.use(cors());
-app.get("/", (req, res) => {
-	res.send("Welcome to shoppies backend api");
-});
+
 mongoose
 	.connect(process.env.CONNECTION_URL, {
 		useNewUrlParser: true,

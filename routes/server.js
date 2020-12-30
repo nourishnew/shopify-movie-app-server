@@ -23,7 +23,6 @@ router.post("/user/login", async (req, res) => {
 	const { name } = req.body;
 	try {
 		const doc = await User.findOne({ name: name }).exec();
-		console.log(doc);
 		res.status(200).send(doc);
 	} catch (error) {
 		res.status(500).send("error");
@@ -49,6 +48,7 @@ router.post("/nomination", async (req, res) => {
 			{ id: userId },
 			{ $push: { nominationsIds: movieId } }
 		).exec();
+
 		res.status(200).send("nomination added");
 	} catch (error) {
 		res.status(500).send(error);
