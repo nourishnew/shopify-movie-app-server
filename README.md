@@ -1,5 +1,4 @@
-#Built for Summer 2021 software engineering internship at Shopify Front end(also comfartable with backend/android positions)
-
+# Built for Summer 2021 software engineering internship at Shopify Front end(also comfartable with backend/android positions)
 Here is link for the the deployed app
 
 https://shopify-shoppies-nourish-app.netlify.app/
