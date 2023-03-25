@@ -9,7 +9,11 @@ const PW = process.env.PW;
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://shopify-shoppies-nourish-app.netlify.app",
+  })
+);
 
 app.use(bodyParser.json({ limit: "500mb" }));
 
