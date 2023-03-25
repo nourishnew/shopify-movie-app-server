@@ -9,6 +9,17 @@ const PW = process.env.PW;
 
 const app = express();
 
+app.use(function (req, res, next) {
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://shopify-shoppies-nourish-app.netlify.app/"
+  ); // update to match the domain you will make the request from
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 app.use(bodyParser.json({ limit: "500mb" }));
 
 app.use(
@@ -16,7 +27,7 @@ app.use(
     extended: true,
   })
 );
-app.use(cors());
+
 app.get("/", (req, res) => {
   res.send("shopify movies server connected");
 });
