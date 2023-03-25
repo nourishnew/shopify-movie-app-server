@@ -6,7 +6,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.6.0",
     "express": "^4.17.1",
     "mongoose": "^5.11.9",
     "neo4j": "^2.0.0-RC2",
@@ -14,7 +14,6 @@
     "nodemon": "^2.0.6",
     "react-query": "^3.5.5"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
