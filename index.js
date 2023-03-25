@@ -9,20 +9,7 @@ const PW = process.env.PW;
 
 const app = express();
 
-app.options(
-  "*",
-  cors({
-    origin: "https://shopify-shoppies-nourish-app.netlify.app",
-    optionsSuccessStatus: 200,
-  })
-);
-
-app.use(
-  cors({
-    origin: "https://shopify-shoppies-nourish-app.netlify.app",
-    optionsSuccessStatus: 200,
-  })
-);
+app.use(cors());
 
 app.use(bodyParser.json({ limit: "500mb" }));
 
