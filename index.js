@@ -9,17 +9,21 @@ const PW = process.env.PW;
 
 const app = express();
 
-app.use(function (req, res, next) {
-  res.header(
-    "Access-Control-Allow-Origin",
-    "https://shopify-shoppies-nourish-app.netlify.app/"
-  ); // update to match the domain you will make the request from
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
+app.options(
+  "*",
+  cors({
+    origin: "https://shopify-shoppies-nourish-app.netlify.app",
+    optionsSuccessStatus: 200,
+  })
+);
+
+app.use(
+  cors({
+    origin: "https://shopify-shoppies-nourish-app.netlify.app",
+    optionsSuccessStatus: 200,
+  })
+);
+
 app.use(bodyParser.json({ limit: "500mb" }));
 
 app.use(
